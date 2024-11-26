@@ -1,0 +1,144 @@
+/* Root styles for global fonts and color scheme */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: block; /* Remove flexbox centering */
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #242424;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1cc4bb;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  margin: 2%;
+
+}
+
+button:hover {
+  border-color: #d43630;
+  
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
+/* Ensure the entire layout is responsive */
+.main-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #dadbf3;
+}
+
+/* DataGrid container styling */
+.data-grid-container {
+  width: 100%;
+  max-width: 1100px; /* Limit max width for larger screens */
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  overflow: hidden;
+}
+
+/* Fix DataGrid headers and responsive heights */
+.data-grid-container .MuiDataGrid-root {
+  height: 500px; /* Default height */
+  min-height: 400px; /* Ensure a minimum height */
+}
+
+.data-grid-container .MuiDataGrid-columnHeaders {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: #f7f7f7;
+}
+
+/* Adjustments for medium-sized screens */
+@media (max-width: 1024px) {
+  .data-grid-container {
+    max-width: 90%; /* Reduce max width */
+  }
+}
+
+/* Adjustments for small-sized screens */
+@media (max-width: 768px) {
+  .data-grid-container {
+    max-width: 100%; /* Full width for smaller screens */
+    overflow-x: auto; /* Enable horizontal scrolling */
+  }
+
+  .main-container h4 {
+    font-size: 1.5rem; /* Reduce font size */
+  }
+}
+
+/* Adjustments for extra small-sized screens */
+@media (max-width: 480px) {
+  .main-container {
+    padding: 10px;
+  }
+
+  .data-grid-container {
+    max-width: 100%;
+    margin: 0;
+    height: auto; /* Adjust height for small screens */
+    overflow: auto;
+  }
+}
