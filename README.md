@@ -39,13 +39,13 @@ Future Enhancements :
 Installation : 
 
 1.Clone the repository : 
-    git clone https://github.com/your-repo-url.git
+    git clone https://github.com/anupsinh16/VRV_RBAC_UI.git
 
 2.Navigate to the project directory 
 
 3.Install dependencies : 
     npm install
-    
+
 4.Start the development server : 
     npm run dev
 
