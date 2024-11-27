@@ -30,3 +30,23 @@ Technologies Used :
         JavaScript-based mock APIs.
 
     
+Future Enhancements :
+
+    Integration with Backend:           Replace the mock API with a real backend service (e.g., Node.js, Django, etc.).
+    Authentication and Authorization:   Add login functionality and restrict access based on roles.
+    Audit Logs:                         Track changes made to users, roles, and permissions for better traceability.
+
+Installation : 
+
+1.Clone the repository : 
+    git clone https://github.com/your-repo-url.git
+
+2.Navigate to the project directory 
+
+3.Install dependencies : 
+    npm install
+    
+4.Start the development server : 
+    npm run dev
+
+
